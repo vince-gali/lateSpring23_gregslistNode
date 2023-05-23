@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "2f7e2ad7-3a47-4ae7-8ef6-978be76a36e3",
+		"name": "Gregslist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19100480"
+	},
+	"item": [
+		{
+			"name": "Cars",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/cars",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"model\":\"GWagon\",\r\n\"make\":\"Mercedes\",\r\n\"year\": \"2011\",\r\n\"engineType\": \"6 Cylinder\",\r\n\"description\":\"True top of the line fuel economy, really great value\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/cars",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"year\": 2020\r\n     \r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/cars/646d08e2fff365f161d63f20",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"cars",
+								"646d08e2fff365f161d63f20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{auth}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Jobs",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/jobs",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/jobs/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"jobs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/jobs/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"jobs",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Houses",
+			"item": [
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/houses/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"houses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/houses",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"houses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/houses/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"houses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/houses/:id",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"houses",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "auth",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IllGVHliajF1TkJNYm1TN0VOOGU0MyJ9.eyJpc3MiOiJodHRwczovL2Rldi1tNm80dnhxa2s3b3pybDNnLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw2NDZkMDhhNzM4OTM2Yjg1MjNhZWIxMGYiLCJhdWQiOlsiaHR0cDovL3NhbmRib3guY29tIiwiaHR0cHM6Ly9kZXYtbTZvNHZ4cWtrN296cmwzZy51cy5hdXRoMC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNjg0ODY3MjQzLCJleHAiOjE2ODQ5NTM2NDMsImF6cCI6IlpBZ2xiN1JPcW5TRTQ1UUF1c0pxdU1mUmpRN0p2SnZYIiwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCJ9.0AB169xMUnW-fOF9lQkxUr4xGQ3S2ZD9ChlEOkfsuUlHIabrP0rbLP3CADZyyPPTcn9J9xnT8tba3obqFSYfVdm2QGvBDCvPgNbYlIOFUPl6_0OumZj5SnKK3vgy1Vq9dbPsFvOdGLdIF7om06jn4r3Tdh0ybHRZNXckjbQIS9h9ULKPV0wMhxZOV039_LJz6tXTNOINR1T56QOllrXE5UoD6q53KjdspuMhIYdpArjTSrvAk1sdeQFNi5lCSxQhzPx_Xcmz1Os0X5Z4ZSWHSl1-eSe0DxQvvZ4VUBexWOViqrIFggp4cAvZ_yeajuI13MVvtcx3NL61LHGe-fBgMw",
+			"type": "string"
+		}
+	]
+}
